@@ -1,5 +1,39 @@
 <robot>
-  <!-- This file is a placeholder which is included by default from
+
+
+<link name="laser_base"/>
+
+  <joint name="laser_base_joint" type="fixed">
+    <origin xyz="0 0 0.4" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="laser_base" />
+  </joint>
+
+
+<link name="rs_lidar"/>
+
+  <joint name="rs_lidar_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="laser_base" />
+    <child link="rs_lidar" />
+  </joint>
+
+
+<link name="lidar"/>
+
+  <joint name="lidar_centre_joint" type="fixed">
+    <origin xyz="0 0 0.04536" rpy="0 0 0" />
+    <parent link="rs_lidar" />
+    <child link="lidar" />
+</joint>
+<link name="rslidar"/>
+
+  <joint name="rs_lidar_centre_joint" type="fixed">
+    <origin xyz="0 0 0.04536" rpy="0 0 0" />
+    <parent link="rs_lidar" />
+    <child link="rslidar" />
+  </joint>
+<!-- This file is a placeholder which is included by default from
        husky.urdf.xacro. If a robot is being customized and requires
        additional URDF, set the HUSKY_URDF_EXTRAS environment variable
        to the full path of the file you would like included. -->
