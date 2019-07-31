@@ -52,7 +52,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- Imu -->
     <include file ="$(find husky_bringup)/launch/um6_config/um6.launch" />
-    
+
+    <!-- LIDAR -->
+    <include file = "$(find rslidar_pointcloud)/launch/rs_lidar_32.launch"/>
     <!-- Diagnostic Aggregator -->
     <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator">
         <rosparam command="load" file="$(find husky_base)/config/diagnostics.yaml"/>

@@ -3,14 +3,14 @@ topics:
   name    : joy_teleop/cmd_vel
   topic   : joy_teleop/cmd_vel
   timeout : 1.5
-  priority: 10
+  priority: 50
 -
   name    : maker
   topic   : cmd
   timeout : 0.5
   priority: 10
 -
-  name    : keyboard
+  name    : common
   topic   : cmd_vel
   timeout : 0.5
   priority: 1
@@ -21,7 +21,7 @@ topics:
   priority: 100
 locks:
 -
-  name    : joystick 
-  topic   : joy_priority
-  timeout : 0.0
+  name    : darpa_estop
+  topic   : emergency_stop 
+  timeout : 10000.0
   priority: 100
