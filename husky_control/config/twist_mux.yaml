@@ -3,7 +3,7 @@ topics:
   name    : joy_teleop/cmd_vel
   topic   : joy_teleop/cmd_vel
   timeout : 1.5
-  priority: 50
+  priority: 101
 -
   name    : maker
   topic   : cmd
@@ -15,10 +15,10 @@ topics:
   timeout : 0.5
   priority: 1
 -
-  name    : tablet
-  topic   : tab_vel
+  name    : command_line
+  topic   : cmd_vel_terminal
   timeout : 0.5
-  priority: 100
+  priority: 90
 locks:
 -
   name    : darpa_estop

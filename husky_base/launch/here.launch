@@ -60,6 +60,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <rosparam command="load" file="$(find husky_base)/config/diagnostics.yaml"/>
     </node>
 
-
+  <include file="$(find darpa_estop_driver)/launch/estop_driver.launch">
+		<arg name="device" value="/dev/ttyUSBEstop" />
+		<arg name="config_for_mission" value="true" /> <!-- change to true in pittsburgh -->
+	</include>
      
 </launch>
